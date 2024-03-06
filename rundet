@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+tmuxinator start determined -n determined -p determined.yaml

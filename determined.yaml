@@ -1,0 +1,7 @@
+project_name: determined
+project_root: ~/code/dev
+windows:
+  - database: docker compose -f static/databases.compose.yaml up postgres
+  - master: ../determined/master/build/determined-master --config-file=static/master.yaml
+  - proxy: socat -d -d "TCP-LISTEN:8081,reuseaddr,fork" "TCP:localhost:8080"
+  - agent: ../determined/agent/build/determined-agent --config-file=static/agent.yaml
