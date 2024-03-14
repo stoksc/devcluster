@@ -1,7 +1,5 @@
 master_host: 127.0.0.1
 master_port: 8081
 container_master_host: docker.host.internal
-agent_reconnect_attempts: 100
-agent_reconnect_backoff: 60
 log:
   level: trace
